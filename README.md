@@ -63,3 +63,6 @@ And then, to publish the image:
 Testcontainers help you create reliable and isolated environments for testing applications that depend on external systems, using Docker to manage these environments easily.
 
 In this part, we did a workflows folder that allows github to run tests for us. In this folder, we created a main.yml file. It was important not to forget to specify the `java-version: '17'`and the `distribution: 'adopt'`, that we forgot at first. Except for this, we use actions to check our github code, and build our app with maven.
+
+### SonarCloud
+The quality gate failed, it is not very good. We can see that about 57 lines aren't covered by test, so about 46.4% of the code, it is not a good practice.
