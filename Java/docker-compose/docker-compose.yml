@@ -1,0 +1,33 @@
+version: '3.7'
+
+services:
+    backend:
+        build:
+          context: "C:\\Users\\shirl\\Desktop\\Cours\\EPF\\4A\\DevOps\\Java\\api\\simple-api-student-main"
+        container_name: "myStudentApi"
+        networks:
+        - app-network
+        depends_on:
+        - database
+
+    database:
+        build:
+          context: "C:\\Users\\shirl\\Desktop\\Cours\\EPF\\4A\\DevOps\\Postgres"
+        container_name: "myPostgres"
+        networks:
+        - app-network
+
+    httpd:
+        build:
+          context: "C:\\Users\\shirl\\Desktop\\Cours\\EPF\\4A\\DevOps\\Java\\server"
+        ports:
+        - "80:80"
+        networks:
+        - app-network
+        depends_on:
+        - backend
+        - database
+
+networks:
+    app-network: 
+      driver: bridge
