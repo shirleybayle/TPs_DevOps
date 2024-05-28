@@ -58,3 +58,6 @@ To publish our image with a tag, we need first to add a tag to our image:
 `docker tag imagename shirleybayle/imagename:tag`
 And then, to publish the image:
 `docker push shirleybayle/imagename:tag`
+
+## TP2 - Github actions part
+Testcontainers help you create reliable and isolated environments for testing applications that depend on external systems, using Docker to manage these environments easily.
