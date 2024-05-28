@@ -8,7 +8,6 @@ on:
       
 jobs:
   build-and-push-docker-image:
-    needs: test-backend
     runs-on: ubuntu-22.04
     if: github.ref == 'refs/heads/main' && success() # Only run on main and if test-backend is successful
     steps:
