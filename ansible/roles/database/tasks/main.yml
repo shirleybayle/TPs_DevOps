@@ -1,0 +1,8 @@
+---
+# tasks file for /mnt/c/Users/shirl/Desktop/Cours/EPF/4A/DevOps/ansible/roles/database
+  - name: Run Database Container
+    docker_container:
+      name: myPostgres
+      image: shirleybayle/tp-devops-database:latest
+      networks:
+        - name: app-network

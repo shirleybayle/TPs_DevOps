@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - /mnt/c/Users/shirl/Desktop/Cours/EPF/4A/DevOps/ansible/roles/network

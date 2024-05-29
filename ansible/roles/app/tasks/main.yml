@@ -1,0 +1,8 @@
+---
+# tasks file for /mnt/c/Users/shirl/Desktop/Cours/EPF/4A/DevOps/ansible/roles/app
+  - name: Run API Container
+    docker_container:
+      name: myStudentApi
+      image: shirleybayle/tp-devops-simple-api:latest
+      networks:
+        - name: app-network

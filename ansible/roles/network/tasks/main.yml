@@ -1,0 +1,6 @@
+---
+# tasks file for /mnt/c/Users/shirl/Desktop/Cours/EPF/4A/DevOps/ansible/roles/network
+  - name: Create Docker network
+    docker_network:
+      name: app-network
+      state: present
