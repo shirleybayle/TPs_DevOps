@@ -65,4 +65,7 @@ Testcontainers help you create reliable and isolated environments for testing ap
 In this part, we did a workflows folder that allows github to run tests for us. In this folder, we created a main.yml file. It was important not to forget to specify the `java-version: '17'`and the `distribution: 'adopt'`, that we forgot at first. Except for this, we use actions to check our github code, and build our app with maven.
 
 ### SonarCloud
-The quality gate failed, it is not very good. We can see that about 57 lines aren't covered by test, so about 46.4% of the code, it is not a good practice.
+We created an account on sonarcloud, an organization and a project. Then, we linked the project to our code to test the quality gate.
+The quality gate failed, it does not have a good grade. We can see that about 57 lines aren't covered by test, so about 46.4% of the code, it is not a good practice.
+
+When we did the bonus, we splitted the worklow in **two different workflows**. The first workflow executes itself when we commit and **push** the code on the main branch on github, whereas the second is executing itself only when the first is **completed with success**.
