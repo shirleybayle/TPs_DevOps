@@ -1,8 +1,14 @@
 ---
 # tasks file for /mnt/c/Users/shirl/Desktop/Cours/EPF/4A/DevOps/ansible/roles/proxy
-  - name: Run HTTPD Server Container
-    docker_container:
-      name: myHttpdServer
-      image: shirleybayle/tp-devops-httpd
-      networks:
-        - name: app-network
+- name: Pull the API Image
+  docker_image:
+    name: shirleybayle/tp-devops-httpd
+    tag: latest
+    source: pull
+
+- name: Run HTTPD Server Container
+  docker_container:
+    name: myHttpdServer
+    image: shirleybayle/tp-devops-httpd:latest
+    networks:
+      - name: app-network

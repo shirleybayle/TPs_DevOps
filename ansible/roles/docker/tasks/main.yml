@@ -37,3 +37,9 @@
       name: docker
       state: started
     tags: docker
+
+  - name: Log in to Docker Hub
+    docker_login:
+      username: shirleybayle
+      password: dckr_pat_HQuaxupXES8FPMt5G34FvLt-HBY
+      reauthorize: yes

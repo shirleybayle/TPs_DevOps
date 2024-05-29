@@ -1,8 +1,17 @@
 ---
 # tasks file for /mnt/c/Users/shirl/Desktop/Cours/EPF/4A/DevOps/ansible/roles/database
-  - name: Run Database Container
-    docker_container:
-      name: myPostgres
-      image: shirleybayle/tp-devops-database:latest
-      networks:
-        - name: app-network
+- name: Pull the API Image
+  docker_image:
+    name: shirleybayle/tp-devops-database
+    source: pull
+
+- name: Run Database Container
+  docker_container:
+    name: myPostgres
+    image: shirleybayle/tp-devops-database:latest
+    networks:
+      - name: app-network
+    env:
+      POSTGRES_DB: db
+      POSTGRES_USER: usr
+      POSTGRES_PASSWORD: pwd
