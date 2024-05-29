@@ -1,6 +1,6 @@
 ---
 # tasks file for /mnt/c/Users/shirl/Desktop/Cours/EPF/4A/DevOps/ansible/roles/proxy
-- name: Pull the API Image
+- name: Pull the Http Image
   docker_image:
     name: shirleybayle/tp-devops-httpd
     tag: latest
@@ -14,3 +14,7 @@
     image: shirleybayle/tp-devops-httpd:latest
     networks:
       - name: app-network
+    ports:
+      - "80:80"
+  vars:
+    ansible_python_interpreter: /usr/bin/python3

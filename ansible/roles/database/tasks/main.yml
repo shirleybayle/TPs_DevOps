@@ -1,6 +1,6 @@
 ---
 # tasks file for /mnt/c/Users/shirl/Desktop/Cours/EPF/4A/DevOps/ansible/roles/database
-- name: Pull the API Image
+- name: Pull the Database Image
   docker_image:
     name: shirleybayle/tp-devops-database
     source: pull
@@ -17,3 +17,6 @@
       POSTGRES_DB: db
       POSTGRES_USER: usr
       POSTGRES_PASSWORD: pwd
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+    
