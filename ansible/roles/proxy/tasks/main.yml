@@ -5,6 +5,8 @@
     name: shirleybayle/tp-devops-httpd
     tag: latest
     source: pull
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
 
 - name: Run HTTPD Server Container
   docker_container:

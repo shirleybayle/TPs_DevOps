@@ -43,3 +43,5 @@
       username: shirleybayle
       password: dckr_pat_HQuaxupXES8FPMt5G34FvLt-HBY
       reauthorize: yes
+    vars:
+      ansible_python_interpreter: /usr/bin/python3

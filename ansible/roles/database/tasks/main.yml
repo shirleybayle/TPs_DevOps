@@ -4,6 +4,8 @@
   docker_image:
     name: shirleybayle/tp-devops-database
     source: pull
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
 
 - name: Run Database Container
   docker_container:
